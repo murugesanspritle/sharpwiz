@@ -206,6 +206,10 @@ h6,
     position: relative;
     overflow: hidden;
 }
+.aboutus-why-choose{
+    color: #FF6F00;
+    font-weight: bold;
+}
 
 .about-img::after {
     position: absolute;
