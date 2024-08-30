@@ -110,11 +110,10 @@ h6,
     vertical-align: middle;
     margin-left: 8px;
 }
-
 @media (max-width: 991.98px) {
     .navbar .navbar-nav {
         padding: 0 15px;
-        background: var(--primary);
+        background: white;
     }
 
     .navbar .navbar-nav .nav-link  {
@@ -201,7 +200,6 @@ h6,
     top: 5px;
     left: 3px;
 }
-
 
 /*** About ***/
 .about-img {
@@ -537,4 +535,64 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+.service-btn:hover{
+    background-color:#FF6F00;
+}
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 85vh; /* Adjust the height of the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 1rem; /* Align to the left side */
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white; /* White text color */
+    text-align: left;
+    padding: 1rem;
+}
+
+.carousel-caption h2 {
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.carousel-caption a {
+    background: transparent; /* Remove background */
+    border: 2px solid white; /* Add border */
+    color: white; /* Text color */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 1.5rem; /* Rounded corners */
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .carousel-caption {
+        /* left: 50%;
+        transform: translate(-50%, -50%); */
+        text-align: center;
+    }
+    
+    .carousel-item img {
+        height: 40vh; /* Adjust the height for smaller screens */
+    }
 }
