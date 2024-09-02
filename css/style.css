@@ -221,6 +221,31 @@ h6,
     background: url(../img/bg-about-img.png) top left no-repeat;
     background-size: contain;
 }
+.btn-outline-social {
+    color: #002A5C;
+    border-color: #002A5C;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-social i {
+    font-size: 20px;
+}
+
+.btn-outline-social:hover {
+    background-color: #002A5C;
+    color: white;
+}
+
+.btn-outline-social:hover i {
+    color: white;
+}
+
 
 
 /*** Service ***/
@@ -543,14 +568,21 @@ h6,
 .service-btn:hover{
     background-color:#FF6F00;
 }
-.carousel-item {
-    position: relative;
+/*  Carousel CSS */
+.carousel-container {
+    max-width: 1440px; /* Adjust the max width to match your content width */
+    margin: 0 auto; /* Center the carousel */
+    
 }
 
-.carousel-item img {
+.carousel-item img,
+.carousel-item video {
     width: 100%;
-    height: 85vh; /* Adjust the height of the images */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    height: 90vh;
+    object-fit: cover;
+}
+.carousel-item video {
+    object-fit: cover; /* Ensure the video maintains its aspect ratio */
 }
 
 .carousel-item::before {
@@ -560,41 +592,59 @@ h6,
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
 .carousel-caption {
     position: absolute;
-    top: 50%;
-    left: 1rem; /* Align to the left side */
+    top: 70%; /* Lowered position */
+    left: 1rem;
     transform: translateY(-50%);
     z-index: 2;
-    color: white; /* White text color */
+    /* color: white; */
     text-align: left;
     padding: 1rem;
 }
+.carousel-2{
+    text-align: right;
+    padding: 0.5rem;
+    right: 0.5rem;
+}
 
 .carousel-caption h2 {
-    margin-bottom: 1.5rem; /* Space below the heading */
+    margin-bottom: 1rem;
 }
 
 .carousel-caption a {
-    background: transparent; /* Remove background */
-    border: 2px solid white; /* Add border */
-    color: white; /* Text color */
-    padding: 0.5rem 1rem; /* Adjust padding */
-    text-decoration: none; /* Remove underline */
-    border-radius: 1.5rem; /* Rounded corners */
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 1.5rem;
 }
 
 /* Responsive styles */
 @media (max-width: 992px) {
     .carousel-caption {
-        text-align: center;
+        /* text-align: center; */
     }
-    
-    .carousel-item img {
-        height: 40vh; /* Adjust the height for smaller screens */
+
+    .carousel-item img,
+    .carousel-item video {
+        height: 50vh;
+        
     }
+}
+
+/* Job card styling */
+.job-card {
+    transition:0.3s all;
+    cursor: pointer;
+}
+.job-card:hover {
+    transform: scale(1.05);
+    background-color: #002A5C; /* New background color on hover */
+    color: aliceblue; /* New text color on hover */
 }

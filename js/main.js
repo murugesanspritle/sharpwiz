@@ -63,3 +63,72 @@
     
 })(jQuery);
 
+
+// form functionality
+
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault(); 
+    const form = e.target;
+    const formData = new FormData(form);
+    const submitButton = document.getElementById("submit-button");
+
+    submitButton.innerHTML = "Sending...";
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                "Accept": "application/json",
+            },
+        });
+
+        if (response.ok) {
+            submitButton.innerHTML = "&#10004; Sent Successfully";
+            submitButton.style.backgroundColor = "#002A5C"; 
+            submitButton.style.borderColor = "#002A5C"; 
+        } else {
+            submitButton.innerHTML = "Submit";
+        }
+    } catch (error) {
+        submitButton.innerHTML = "Submit";
+    }
+});
+
+// contact form validation
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const submitButton = document.getElementById("submit-button");
+
+        const email = emailInput.value;
+        const phone = phoneInput.value;
+
+        // Validate email domain
+        const bannedDomains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com"];
+        const emailDomain = email.split('@').pop();
+
+        if (bannedDomains.includes(emailDomain)) {
+            emailInput.classList.add("is-invalid");
+            return; // Prevent form submission
+        } else {
+            emailInput.classList.remove("is-invalid");
+        }
+
+        // Validate phone number length (should be between 10 to 14 digits)
+        if (phone.length < 10 || phone.length > 14) {
+            phoneInput.classList.add("is-invalid");
+            return; // Prevent form submission
+        } else {
+            phoneInput.classList.remove("is-invalid");
+        }
+
+        // Change button text to "Sending..."
+        submitButton.innerHTML = "Sending...";
+
+        // Submit the form if validation passes
+        this.submit();
+    });
