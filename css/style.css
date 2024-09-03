@@ -570,7 +570,7 @@ h6,
 }
 /*  Carousel CSS */
 .carousel-container {
-    max-width: 1440px; /* Adjust the max width to match your content width */
+    max-width: 100%; /* Adjust the max width to match your content width */
     margin: 0 auto; /* Center the carousel */
     
 }
