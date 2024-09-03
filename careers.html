@@ -47,100 +47,104 @@
 
 
     <!-- Navbar Start -->
- <div class="container-fluid sticky-top bg-white">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <a href="index.html" class="navbar-brand">
-                <img src="img/banner_logo.png" alt="logo" class="img-fluid" style="width: 160px; height:auto;">
-            </a>
-            
-            <!-- Off-Canvas Toggler -->
-            <button class="navbar-toggler ms-auto me-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <i class="fa fa-bars" style="color: #002A5C;"></i>
-            </button>
-            
-            <!-- Off-Canvas Menu -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <!-- Logo in Off-Canvas Header -->
-                    <a href="index.html" class="navbar-brand">
-                        <img src="img/banner_logo.png" alt="logo" class="img-fluid" style="width: 150px; height:auto; margin-left: 10px;">
-                    </a>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">SOLUTIONS</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="gen-ai-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-robot me-2"></i>Generative AI</a></li>
-                                <li><a href="computer-vision-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-camera me-2"></i>Computer Vision & AI</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">SERVICES</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="service-gen-ai.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-brain me-2"></i>Generative AI</a></li>
-                                <li><a href="computer-vision-service.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-eye me-2"></i>Computer Vision & AI</a></li>
-                                <li><a href="digital-transform-iot.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-network-wired me-2"></i>Digital Transformation & IOT</a></li>
-                                <li><a href="testing.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-vials me-2"></i>Testing as a Service</a></li>
-                                <li><a href="professional-services.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                    <i class="fa fa-user-tie me-2"></i>Professional Services</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="who-we-are.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">WHO WE ARE</a></li>
-                        <li><a href="insights.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">INSIGHTS</a></li>
-                        <li><a href="careers.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">CAREERS</a></li>
-                        <li><a href="contact.html" class="nav-item nav-link btn btn-sm border rounded-pill text-center" style="font-weight: 600; background-color: #002A5C; color: #fff; border-radius: 20px; padding: 0.375rem 0.75rem;">CONTACT US</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Desktop Menu -->
-            <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarCollapse">
-                <div class="navbar-nav ms-auto align-items-center">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">SOLUTIONS</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="gen-ai-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-robot me-2"></i>Generative AI</a>
-                            <a href="computer-vision-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-camera me-2"></i>Computer Vision & AI</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">SERVICES</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="service-gen-ai.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-brain me-2"></i>Generative AI</a>
-                            <a href="computer-vision-service.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-eye me-2"></i>Computer Vision & AI</a>
-                            <a href="digital-transform-iot.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-network-wired me-2"></i>Digital Transformation & IOT</a>
-                            <a href="testing.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-vials me-2"></i>Testing as a Service</a>
-                            <a href="professional-services.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
-                                <i class="fa fa-user-tie me-2"></i>Professional Services</a>
-                        </div>
-                    </div>
-                    <a href="who-we-are.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">WHO WE ARE</a>
-                    <a href="insights.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">INSIGHTS</a>
-                    <a href="careers.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">CAREERS</a>
-                    <a href="contact.html" class="nav-item nav-link btn btn-sm border rounded-pill text-center" style="font-weight: 600; background-color: #002A5C; color: aliceblue; border-radius: 20px; padding: 0.375rem 0.75rem; margin-left: 10px;">CONTACT US</a>
-                </div>
-                <button type="button" class="btn p-2 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <i class="fa fa-search"></i>
+    <div class="container-fluid sticky-top bg-white">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/banner_logo.png" alt="logo" class="img-fluid" style="width: 160px; height:auto;">
+                </a>
+                
+                <!-- Off-Canvas Toggler -->
+                <button class="navbar-toggler ms-auto me-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fa fa-bars" style="color: #002A5C;"></i>
                 </button>
-            </div>
-        </nav>
+                
+                <!-- Off-Canvas Menu -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <!-- Logo in Off-Canvas Header -->
+                        <a href="index.html" class="navbar-brand">
+                            <img src="img/logo.jpeg" alt="logo" class="img-fluid" style="width: 150px; height:auto; margin-left: 10px;">
+                        </a>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">SOLUTIONS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="gen-ai-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-robot me-2"></i>Generative AI</a></li>
+                                    <li><a href="computer-vision-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-camera me-2"></i>Computer Vision & AI</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">SERVICES</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="service-gen-ai.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-brain me-2"></i>Generative AI</a></li>
+                                    <li><a href="computer-vision-service.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-eye me-2"></i>Computer Vision & AI</a></li>
+                                    <li><a href="digital-transform-iot.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-network-wired me-2"></i>Digital Transformation & IOT</a></li>
+                                    <li><a href="testing.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-vials me-2"></i>Testing as a Service</a></li>
+                                    <li><a href="professional-services.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                        <i class="fa fa-user-tie me-2"></i>Professional Services</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="who-we-are.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">WHO WE ARE</a></li>
+                            <li><a href="insights.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">INSIGHTS</a></li>
+                            <li><a href="careers.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">CAREERS</a></li>
+                            <li><a href="contact.html" class="nav-item nav-link btn btn-sm border rounded-pill text-center" style="font-weight: 600; background-color: #002A5C; color: #fff; border-radius: 20px; padding: 0.375rem 0.75rem;">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto align-items-center">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">Solutions</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="gen-ai-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-robot me-2"></i>Generative AI</a>
+                                <a href="computer-vision-solutions.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-camera me-2"></i>Computer Vision & AI</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" style="color: #002A5C; font-weight: 600;" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="service-gen-ai.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-brain me-2"></i>Generative AI</a>
+                                <a href="computer-vision-service.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-eye me-2"></i>Computer Vision & AI</a>
+                                <a href="digital-transform-iot.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-network-wired me-2"></i>Digital Transformation & IOT</a>
+                                <a href="testing.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-vials me-2"></i>Testing as a Service</a>
+                                <a href="professional-services.html" class="dropdown-item" style="color: #002A5C; font-weight: 600;">
+                                    <i class="fa fa-user-tie me-2"></i>Professional Services</a>
+                            </div>
+                        </div>
+                        <a href="who-we-are.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">Who we are</a>
+                        <a href="insights.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">Insights</a>
+                        <a href="careers.html" class="nav-item nav-link" style="color: #002A5C; font-weight: 600;">Careers</a>
+                        <a href="contact.html" class="nav-item nav-link btn btn-sm border rounded-pill text-center" style="font-weight: 600; background-color: #002A5C; color: aliceblue; border-radius: 20px; padding: 0.375rem 0.75rem; margin-left: 10px; font-size: 1rem;">
+                            Contact us
+                        </a>
+                        <a class="btn p-2 d-none d-lg-block" href="https://www.linkedin.com/company/sharpwiztech/" target="_blank" style="font-size: 1rem;color: #002A5C;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn  p-2 d-none d-lg-block" href="https://x.com/sharpwiztech" target="_blank" style="font-size: 1rem;color: #002A5C;">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
     
     <!-- Navbar End -->
 
@@ -149,10 +153,10 @@
     <div class="container-fluid pt-5 bg-primary hero-header">
         <div class="container pt-5">
             <div class="row g-5 pt-5">
-                <div class="col-lg-6 align-self-center text-center text-lg-start">
+                <div class="col-lg-6 justify-content-end align-self-end">
                     <h1 class="display-4 text-white mb-4 animated slideInRight" style="font-size: 26px;">Where Your Career Meets Innovation</h1>
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                        <ol class="breadcrumb  justify-content-lg-start mb-4">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Careers</a></li>
                             
