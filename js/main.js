@@ -68,10 +68,36 @@
 
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
     e.preventDefault(); 
+
     const form = e.target;
     const formData = new FormData(form);
     const submitButton = document.getElementById("submit-button");
 
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const email = emailInput.value;
+    const phone = phoneInput.value;
+
+    // Validate email domain
+    const bannedDomains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com"];
+    const emailDomain = email.split('@').pop();
+
+    if (bannedDomains.includes(emailDomain)) {
+        emailInput.classList.add("is-invalid");
+        return; // Prevent form submission
+    } else {
+        emailInput.classList.remove("is-invalid");
+    }
+
+    // Validate phone number length (should be between 10 to 14 digits)
+    if (phone.length < 10 || phone.length > 14) {
+        phoneInput.classList.add("is-invalid");
+        return; // Prevent form submission
+    } else {
+        phoneInput.classList.remove("is-invalid");
+    }
+
+    // Change button text to "Sending..."
     submitButton.innerHTML = "Sending...";
 
     try {
@@ -86,49 +112,24 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         if (response.ok) {
             submitButton.innerHTML = "&#10004; Sent Successfully";
             submitButton.style.backgroundColor = "#002A5C"; 
-            submitButton.style.borderColor = "#002A5C"; 
+            submitButton.style.borderColor = "#002A5C";
+
+            // Reset button to its original state after 3 seconds
+            setTimeout(() => {
+                submitButton.innerHTML = "Submit";
+                submitButton.style.backgroundColor = ""; 
+                submitButton.style.borderColor = ""; 
+            }, 3000);
+
+            // Optionally clear the form after submission
+            form.reset();
         } else {
             submitButton.innerHTML = "Submit";
+            alert("There was a problem submitting your form. Please try again.");
         }
     } catch (error) {
         submitButton.innerHTML = "Submit";
+        alert("There was an error with your submission. Please check your internet connection and try again.");
     }
 });
 
-// contact form validation
-
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        const emailInput = document.getElementById("email");
-        const phoneInput = document.getElementById("phone");
-        const submitButton = document.getElementById("submit-button");
-
-        const email = emailInput.value;
-        const phone = phoneInput.value;
-
-        // Validate email domain
-        const bannedDomains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com"];
-        const emailDomain = email.split('@').pop();
-
-        if (bannedDomains.includes(emailDomain)) {
-            emailInput.classList.add("is-invalid");
-            return; // Prevent form submission
-        } else {
-            emailInput.classList.remove("is-invalid");
-        }
-
-        // Validate phone number length (should be between 10 to 14 digits)
-        if (phone.length < 10 || phone.length > 14) {
-            phoneInput.classList.add("is-invalid");
-            return; // Prevent form submission
-        } else {
-            phoneInput.classList.remove("is-invalid");
-        }
-
-        // Change button text to "Sending..."
-        submitButton.innerHTML = "Sending...";
-
-        // Submit the form if validation passes
-        this.submit();
-    });
