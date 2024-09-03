@@ -202,16 +202,17 @@ h6,
 }
 
 /*** About ***/
-.about-img {
+/* .about-img {
     position: relative;
     overflow: hidden;
-}
+    border-radius: 10px;
+} */
 .aboutus-why-choose{
     color: #FF6F00;
     font-weight: bold;
 }
 
-.about-img::after {
+/* .about-img::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -219,8 +220,8 @@ h6,
     top: 0;
     left: 0;
     background: url(../img/bg-about-img.png) top left no-repeat;
-    background-size: contain;
-}
+    background-size: cover;
+} */
 .btn-outline-social {
     color: #002A5C;
     border-color: #002A5C;
@@ -316,10 +317,13 @@ h6,
 
 /*** Feature ***/
 .feature {
-    background: url(../img/bg-hero.png) center center no-repeat;
+    /* background: url(../img/bg-hero.png) center center no-repeat; */
     background-size: cover;
+    color: #002A5C;
 }
-
+.feature img{
+    border-radius: 10px;
+}
 
 /*** Newsletter ***/
 .newsletter {
