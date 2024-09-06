@@ -162,6 +162,7 @@ h6,
 }
 
 
+
 /*** Hero Header ***/
 .hero-header {
     margin-top: -75px;
@@ -716,4 +717,97 @@ h6,
     transform: scale(1.05);
     background-color: #002A5C; /* New background color on hover */
     color: aliceblue; /* New text color on hover */
+}
+
+
+/* General box styling */
+.box {
+    position: relative;
+    background-color: #002A5C; /* Background color */
+    color: white; /* Text color */
+    border: 1px solid #002A5C; /* Border color */
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px; /* Adjust width as needed */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Space at the bottom of each box */
+}
+
+/* Arrow icon styling */
+.arrow-icon {
+    position: absolute;
+    font-size: 24px; /* Size of the arrow */
+    color: #002A5C; /* Arrow color */
+}
+
+.arrow-right {
+    right: -30px; /* Gap between box and right arrow */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-down {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 992px) {
+    .box {
+        max-width: none; /* Allow full width on smaller screens */
+    }
+
+    .arrow-right {
+        display: none; /* Hide right arrow on small screens */
+    }
+
+    .arrow-down {
+        display: block; /* Show down arrow on small screens */
+        position: relative;
+        margin: 20px auto 0; /* Center down arrow and provide margin */
+        font-size: 24px; /* Adjust size as needed */
+        color: #002A5C;
+    }
+
+    /* Stack boxes vertically on smaller screens */
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-3 {
+        width: 100%;
+        max-width: none; /* Ensure full width on smaller screens */
+        text-align: center;
+    }
+}
+
+.service-item {
+    background-color: #fff; /* Background color of the box */
+    color: #002A5C; /* Text color */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 250px; /* Ensures consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-custom {
+    font-size: 18px;
+    border-color: #002A5C;
+    color: #002A5C;
+}
+.btn-custom:hover {
+    background-color: #002A5C;
+    color: #fff;
+}
+.section-heading {
+    color: #002A5C;
+}
+@media (max-width: 992px) {
+    .service-item {
+        width: 100%; /* Remove fixed height for smaller screens */
+    }
 }
